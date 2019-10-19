@@ -41,13 +41,11 @@ header {
     margin-bottom: 0.75rem;
   }
 }
-
 @media (min-width: 30rem) {
   .mb2-ns {
     margin-bottom: 0.8rem;
   }
 }
-
 @media (max-width: 796px) {
   .f-headline-ns {
     font-size: 10vmin;
@@ -58,11 +56,18 @@ header {
 }
 
 @media (max-width: 991px) {
+  .grid-container--content {
+    grid-auto-columns: 0.25fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
   b.mb4-ns {
     margin-bottom: 0.75rem;
   }
 }
-
 @media (min-width: 769px) {
   b.mb4-ns {
     margin-bottom: 0;

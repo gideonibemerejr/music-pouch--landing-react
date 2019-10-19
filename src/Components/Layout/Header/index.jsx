@@ -19,7 +19,7 @@ const Header = () => {
         </nav>
         <div className='mh4 pv4 flex flex-column justify-end'>
           <div>
-            <div className='flex flex-row items-center items-end ns'>
+            <div className='flex flex-row items-center items-end-ns'>
               <h1 className='f-headline-ns f1 lh-solid ma0 dib pr3'>
                 Music Pouch
               </h1>
@@ -31,7 +31,7 @@ const Header = () => {
             <blockquote className='ph0 pb2 mb3 mh0 mt3'>
               <p className='f2-ns f5'>
                 An Independent{' '}
-                <i className='link hover-dark-red'>public relations firm</i> and
+                <i className='link hover-dark-red'>public relations firm</i> and{' '}
                 <i className='link hover-dark-red'>creative studio</i>
               </p>
             </blockquote>

@@ -1,10 +1,11 @@
 import React from 'react'
-
+import { Layout } from '../../Components'
+import { Sections } from './components'
 const HomePage = () => {
   return (
-    <div>
-      <h1>Homepage</h1>
-    </div>
+    <Layout>
+      <Sections />
+    </Layout>
   )
 }
 
