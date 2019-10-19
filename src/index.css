@@ -24,6 +24,15 @@ p.text {
   display: flex;
   flex-direction: column;
 }
+.clients-list {
+  max-width: 100%;
+  columns: 2 auto;
+}
+
+div.clients-list > p {
+  margin: 0 1rem 1rem 0;
+  max-width: 100%;
+}
 .section-container {
   display: flex;
   flex-direction: column;

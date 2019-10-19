@@ -1,11 +1,12 @@
 import React from 'react'
 import Info from './Info'
-import Services from './Services'
-import Clients from './Clients'
+import ServicesAndClients from './ServicesAndClients'
+
 const Section = () => {
   return (
     <main>
       <Info />
+      <ServicesAndClients />
     </main>
   )
 }

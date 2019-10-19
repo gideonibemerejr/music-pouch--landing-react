@@ -25,63 +25,59 @@ const infoRed = [
   }
 ]
 
-const services = [
-  {
-    title: 'Services',
-    services: [
-      'Animation',
+const services = {
+  title: 'Services',
+  services: [
+    'Animation',
 
-      'App Development',
+    'App Development',
 
-      'Branding',
+    'Branding',
 
-      'Campaigns',
+    'Campaigns',
 
-      'Communication',
+    'Communication',
 
-      'Consulting',
+    'Consulting',
 
-      'Design',
-      'Direction',
+    'Design',
+    'Direction',
 
-      'Event Production',
+    'Event Production',
 
-      'Photography',
+    'Photography',
 
-      'Web Development'
-    ]
-  }
-]
+    'Web Development'
+  ]
+}
 
-const clients = [
-  {
-    title: 'Clients',
-    clients: [
-      'Brockhampton',
-      'Cheldon McQueen',
-      'Contour',
-      'Corbin Cary',
-      'Dylan Kidd',
-      'Dinosaurs & Handguns',
-      'ESC ARCHIVE',
-      'Flamingosis',
-      'Franklin Mendez',
-      'Jody Tha Libra',
-      'John Looke',
-      'Langston Bleu',
-      'Myke Bogan',
-      'OBESØN',
-      'Pascäal',
-      'Pusher',
-      'Rauru',
-      'Rolmex',
-      'Soupmakesitbetter',
-      'SVNSET WAVES',
-      'Trevor Daniel',
-      'Ykwo',
-      'yuri-095'
-    ]
-  }
-]
+const clients = {
+  title: 'Clients',
+  clients: [
+    'Brockhampton',
+    'Cheldon McQueen',
+    'Contour',
+    'Corbin Cary',
+    'Dylan Kidd',
+    'Dinosaurs & Handguns',
+    'ESC ARCHIVE',
+    'Flamingosis',
+    'Franklin Mendez',
+    'Jody Tha Libra',
+    'John Looke',
+    'Langston Bleu',
+    'Myke Bogan',
+    'OBESØN',
+    'Pascäal',
+    'Pusher',
+    'Rauru',
+    'Rolmex',
+    'Soupmakesitbetter',
+    'SVNSET WAVES',
+    'Trevor Daniel',
+    'Ykwo',
+    'yuri-095'
+  ]
+}
 
 export { infoBlack, infoRed, services, clients }

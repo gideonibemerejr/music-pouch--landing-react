@@ -5,8 +5,11 @@ const Info = () => {
   return (
     <>
       <section className='pt6-ns pt4 bg-near-black near-white section-layout'>
-        {infoBlack.map(section => (
-          <inner className='pb6-ns pb4 text-grid grid-container--content'>
+        {infoBlack.map((section, idx) => (
+          <inner
+            key={idx}
+            className='pb6-ns pb4 text-grid grid-container--content'
+          >
             <div className='grid-block--title mh4'>
               <h2 className='f1-ns f2'>{section.title}</h2>
             </div>
