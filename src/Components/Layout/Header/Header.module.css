@@ -29,10 +29,10 @@ header {
   align-items: center;
 }
 
-.text-avail {
+.text_avail {
   color: #a5cf6f;
 }
-.text-closed {
+.text_closed {
   color: #e7040f;
 }
 

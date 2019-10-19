@@ -1,0 +1,34 @@
+.circle {
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 1s;
+  background-color: #999;
+  animation: spin 3000ms linear infinite;
+  -webkit-animation: spin 3000ms linear infinite;
+  -moz-animation: spin 3000ms linear infinite;
+}
+
+.Avail {
+  background: linear-gradient(45deg, #000, #000 100%),
+    linear-gradient(135deg, #a5cf6f, #a5cf6f),
+    linear-gradient(225deg, #a5cf6f, #a5cf6f),
+    linear-gradient(225deg, #000, #000);
+  background-size: 50% 50%;
+  background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.Closed {
+  background: linear-gradient(45deg, #000, #000 100%),
+    linear-gradient(135deg, #e7040f, #e7040f),
+    linear-gradient(225deg, #e7040f, #e7040f),
+    linear-gradient(225deg, #000, #000);
+  background-size: 50% 50%;
+  background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+  background-repeat: no-repeat;
+}
