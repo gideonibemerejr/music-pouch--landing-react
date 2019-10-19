@@ -67,3 +67,7 @@ p.text {
 footer > .section-layout {
   height: 50vh;
 }
+.arrow {
+  width: 5rem;
+  height: 5rem;
+}
