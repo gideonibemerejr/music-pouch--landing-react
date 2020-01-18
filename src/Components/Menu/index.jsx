@@ -14,11 +14,14 @@ const Menu = ({ handleMenuClick }) => {
         className='h-100 flex flex-column justify-between'
       >
         <Nav handleMenuClick={handleMenuClick} />
+        <div className='h-100 white pa4'>
+          <h1>hello</h1>
+        </div>
         <ul
           onClick={handleMenuClick}
-          className='cf list pa4 w-100 h-100 flex justify-between items-end'
+          className='cf list pa4 w-100 h-100 flex items-end'
         >
-          <li className='sans-serif tc mb4 mr3 '>
+          <li className='sans-serif tc mb4 mr5-ns mr3 '>
             <Link
               to='/'
               className='f-subheadline-ns f3 link dim hover-red fw7 white'
@@ -26,7 +29,7 @@ const Menu = ({ handleMenuClick }) => {
               Home
             </Link>
           </li>
-          <li className=' sans-serif mb4 tc mr3'>
+          <li className=' sans-serif mb4 tc mr5-ns mr3'>
             <Link
               to='/blog/pouch'
               className='f-subheadline-ns f3 hover-red link dim fw7 white'
@@ -34,7 +37,7 @@ const Menu = ({ handleMenuClick }) => {
               Pouch
             </Link>
           </li>
-          <li className=' sans-serif tc mb4 mr3'>
+          <li className=' sans-serif tc mb4 mr5-ns mr3'>
             <Link
               to='/blog/photoessays'
               className='f-subheadline-ns f3 link dim hover-red fw7 white'
