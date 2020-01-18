@@ -1,14 +1,14 @@
 import React from 'react'
-import { Circle, FeatureText, Nav } from '../../Components'
-import PhotoEssay from '../PhotoEssays/PhotoEssay'
+import { Circle, Nav } from '../../Components'
+
 import Menu from '../../Components/Menu'
 
 const Pouch = props => {
-  console.log(props)
-  return props.isMenuOpen ? (
-    <Menu handleMenuClick={props.handleMenuClick} />
-  ) : (
+  return (
     <article className=''>
+      {props.isMenuOpen ? (
+        <Menu handleMenuClick={props.handleMenuClick} />
+      ) : null}
       <div
         className='vh-100 dt w-100 flex flex-column  bg-dark-gray white cover'
         style={{
@@ -42,8 +42,6 @@ const Pouch = props => {
           </li>
         </ul>
       </div>
-      <FeatureText />
-      <PhotoEssay />
     </article>
   )
 }

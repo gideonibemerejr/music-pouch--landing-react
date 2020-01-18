@@ -7,7 +7,34 @@ const Header = ({ handleMenuClick }) => {
   return (
     <header>
       <section className={styles.header_grid}>
-        <Nav handleMenuClick={handleMenuClick} />
+        <nav
+          className={`${styles.nav} flex justify-between items-center  mh4 pt5`}
+        >
+          <div className={`${styles.arrow}  bw4 bt bl `} />
+          <div className={`${styles.arrow} bw4 bt br  ${styles.right}`}>
+            <div
+              onClick={handleMenuClick}
+              className='tr pa3 black hover-red dim'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                className='feather feather-info'
+              >
+                <circle cx='12' cy='12' r='10'></circle>
+                <line x1='12' y1='16' x2='12' y2='12'></line>
+                <line x1='12' y1='8' x2='12' y2='8'></line>
+              </svg>
+            </div>
+          </div>
+        </nav>
         <div className='mh4 pv4 flex flex-column justify-end'>
           <div>
             <div className='flex flex-row items-center items-end-ns'>

@@ -16,7 +16,7 @@ class App extends Component {
   state = {
     title: 'Music Pouch',
     tagline: 'An idea on two iPhones',
-    isMenuOpen: true
+    isMenuOpen: false
   }
 
   handleMenuClick = () => {
@@ -43,9 +43,14 @@ class App extends Component {
             <Route path='/blog/photoessays' component={PhotoEssay} />
             <Route
               path='/blog/pouch'
-              render={() => (
-                <Pouch {...this.state} handleMenuClick={this.handleMenuClick} />
-              )}
+              render={() => {
+                return (
+                  <Pouch
+                    {...this.state}
+                    handleMenuClick={this.handleMenuClick}
+                  />
+                )
+              }}
             />
             {/* <Route exact path='blog/photoessay/:slug' component={Pouch} /> */}
             {/* <Route exact path='blog/pouch/:slug' component={Pouch} /> */}
