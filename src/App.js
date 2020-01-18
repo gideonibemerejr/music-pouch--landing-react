@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { HomePage } from './Pages'
+import { HomePage, BlogPage } from './Pages'
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Switch>
         {/* Route to Home Page */}
         <Route exact path='/' component={HomePage} />
+        <Route exact path='/blog' component={BlogPage} />
       </Switch>
     </Router>
   )
