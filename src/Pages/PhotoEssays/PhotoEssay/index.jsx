@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Blockquote } from '..'
+import { Blockquote } from '../../../Components'
 
 const PhotoEssay = () => {
   return (

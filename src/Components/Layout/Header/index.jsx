@@ -1,22 +1,13 @@
 import React from 'react'
 import styles from './Header.module.css'
 import info from './assets/info.svg'
-import { Circle } from '../..'
+import { Circle, Nav } from '../..'
 
-const Header = () => {
+const Header = ({ handleMenuClick }) => {
   return (
     <header>
       <section className={styles.header_grid}>
-        <nav
-          className={`${styles.nav} flex justify-between items-center  mh4 mt5`}
-        >
-          <div className={`${styles.arrow}  bw4 bt bl`} />
-          <div className={`${styles.arrow} bw4 bt br ${styles.right}`}>
-            <div className='ma3'>
-              <img src={info} alt='' />
-            </div>
-          </div>
-        </nav>
+        <Nav handleMenuClick={handleMenuClick} />
         <div className='mh4 pv4 flex flex-column justify-end'>
           <div>
             <div className='flex flex-row items-center items-end-ns'>
