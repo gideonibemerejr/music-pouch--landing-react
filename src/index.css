@@ -14,7 +14,9 @@ body {
 .f-headline-ns {
   font-size: 15vmin;
 }
-
+.text_avail {
+  color: #a5cf6f;
+}
 .f1-ns,
 .f2-ns,
 p.text {

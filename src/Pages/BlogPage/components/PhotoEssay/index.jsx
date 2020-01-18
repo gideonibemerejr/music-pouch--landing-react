@@ -1,16 +1,14 @@
 import React from 'react'
 
+import { Blockquote } from '..'
+
 const PhotoEssay = () => {
   return (
     <article className='helvetica pb5'>
-      <FullScreenCover />
-      {/* Blockquote area */}
-      <div className='sans-serif ph3 ph4-m ph5-l'>
-        <p className='lh-copy f5 f3-m f1-l measure center pv4'>
-          On <time>March 14, 1896</time>, the Sutro Baths were opened to the
-          public as the world's largest indoor swimming pool establishment.{' '}
-        </p>
-      </div>
+      {/* Blockquote 
+            // TODO: ADD PROPS of statement & statement
+        */}
+      <Blockquote />
       <div className='f5 f3-m lh-copy'>
         <div className='cf dt-l w-100 bt b--black-10 pv4'>
           <div className='dtc-l v-mid mw6 pr3-l'>
