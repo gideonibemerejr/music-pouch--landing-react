@@ -1,12 +1,15 @@
 import React from 'react'
 import styles from '../Header/Header.module.css'
 
-const Nav = ({ handleMenuClick }) => {
+const Nav = ({ handleMenuClick, color }) => {
   return (
     <nav className={`${styles.nav} flex justify-between items-center  mh4 pt4`}>
-      <div className={`${styles.arrow}  bw4 bt bl b--white`} />
-      <div className={`${styles.arrow} bw4 bt br b--white ${styles.right}`}>
-        <div onClick={handleMenuClick} className='tr pa3 white hover-red dim'>
+      <div className={`${styles.arrow}  bw4 bt bl b--${color}`} />
+      <div className={`${styles.arrow} bw4 bt br b--${color} ${styles.right}`}>
+        <div
+          onClick={handleMenuClick}
+          className={`tr pa3 ${color} hover-red dim`}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='24'

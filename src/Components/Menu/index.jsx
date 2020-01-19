@@ -13,34 +13,31 @@ const Menu = ({ handleMenuClick }) => {
         }}
         className='h-100 flex flex-column justify-between'
       >
-        <Nav handleMenuClick={handleMenuClick} />
-        <div className='h-100 white mh4'>
-          <h1>hello</h1>
-        </div>
+        <Nav handleMenuClick={handleMenuClick} color={'white'} />
         <ul
           onClick={handleMenuClick}
-          className='cf list w-100 h-100 flex items-end'
+          className='cf list h-100 flex items-center justify-between mh4 pa0'
         >
-          <li className='sans-serif tc mb4 mr5-ns mr3 '>
+          <li className='sans-serif tc mb4  '>
             <Link
               to='/'
-              className='f-subheadline-ns f3 link dim hover-red fw7 white'
+              className='f-subheadline-ns f3 link dim hover-red fw5 white'
             >
               Home
             </Link>
           </li>
-          <li className=' sans-serif mb4 tc mr5-ns mr3'>
+          <li className=' sans-serif mb4 tc '>
             <Link
               to='/blog/pouch'
-              className='f-subheadline-ns f3 hover-red link dim fw7 white'
+              className='f-subheadline-ns f3 hover-red link dim fw5 white'
             >
               Pouch
             </Link>
           </li>
-          <li className=' sans-serif tc mb4 mr5-ns mr3'>
+          <li className=' sans-serif tc mb4 '>
             <Link
               to='/blog/photoessays'
-              className='f-subheadline-ns f3 link dim hover-red fw7 white'
+              className='f-subheadline-ns f3 link dim hover-red fw5 white'
             >
               Essays
             </Link>
@@ -48,7 +45,7 @@ const Menu = ({ handleMenuClick }) => {
           <li className=' sans-serif tc mb4 '>
             <Link
               to='/blog/photoessays'
-              className='f-subheadline-ns f3 link dim hover-red fw7 white'
+              className='f-subheadline-ns f3 link dim hover-red fw5 white'
             >
               Work
             </Link>

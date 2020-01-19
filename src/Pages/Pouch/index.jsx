@@ -4,11 +4,10 @@ import { Circle, Nav } from '../../Components'
 import Menu from '../../Components/Menu'
 
 const Pouch = props => {
-  return (
+  return props.isMenuOpen ? (
+    <Menu handleMenuClick={props.handleMenuClick} />
+  ) : (
     <article className=''>
-      {props.isMenuOpen ? (
-        <Menu handleMenuClick={props.handleMenuClick} />
-      ) : null}
       <div
         className='vh-100 dt w-100 flex flex-column  bg-dark-gray white cover'
         style={{
@@ -16,7 +15,7 @@ const Pouch = props => {
             'url(http://mrmrs.github.io/photos/u/009.jpg) no-repeat center'
         }}
       >
-        <Nav handleMenuClick={props.handleMenuClick} />
+        <Nav handleMenuClick={props.handleMenuClick} color={'black'} />
         <ul className='cf list pl0 ml0 w-100 h-100 flex justify-between items-center'>
           <li
             className='fl w-100 w-50-ns sans-serif'
