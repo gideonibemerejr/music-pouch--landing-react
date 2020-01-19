@@ -14,12 +14,12 @@ const Menu = ({ handleMenuClick }) => {
         className='h-100 flex flex-column justify-between'
       >
         <Nav handleMenuClick={handleMenuClick} />
-        <div className='h-100 white pa4'>
+        <div className='h-100 white mh4'>
           <h1>hello</h1>
         </div>
         <ul
           onClick={handleMenuClick}
-          className='cf list pa4 w-100 h-100 flex items-end'
+          className='cf list w-100 h-100 flex items-end'
         >
           <li className='sans-serif tc mb4 mr5-ns mr3 '>
             <Link
