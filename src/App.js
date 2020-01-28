@@ -52,7 +52,7 @@ class App extends Component {
                 )
               }}
             />
-            {/* <Route exact path='blog/photoessay/:slug' component={Pouch} /> */}
+            {/* <Route exact path='blog/photoessay/:slug' component={} /> */}
             {/* <Route exact path='blog/pouch/:slug' component={Pouch} /> */}
           </Switch>
         </Router>
