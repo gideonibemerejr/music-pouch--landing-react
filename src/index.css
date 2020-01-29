@@ -148,3 +148,24 @@ footer > .section-layout {
     margin-bottom: 0;
   }
 }
+
+.mw55 {
+  max-width: 24rem;
+}
+.card {
+  padding-bottom: 3px;
+}
+.card > .link:visited {
+  color: currentColor;
+}
+
+.card:hover {
+  border-bottom: 3px #e7040f solid;
+  padding-bottom: 0px;
+}
+
+.inside > h1:hover,
+.inside > h2:hover {
+  text-decoration: underline;
+  text-decoration-color: #e7040f;
+}

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 
-import { HomePage, BlogPage } from './Pages'
+import { HomePage, BlogPage, PouchDetail } from './Pages'
 import { PhotoEssay, Pouch } from './Pages/BlogPage/components'
 import Menu from './Components/Menu'
 
@@ -29,31 +29,37 @@ class App extends Component {
         <Router>
           <Switch>
             {/* Route to Home Page */}
-            <Route
-              exact
-              path='/'
-              render={() => (
-                <HomePage
-                  {...this.state}
-                  handleMenuClick={this.handleMenuClick}
+            {this.state.isMenuOpen ? (
+              <Menu handleMenuClick={this.handleMenuClick} />
+            ) : (
+              <>
+                <Route
+                  exact
+                  path='/'
+                  render={() => (
+                    <HomePage
+                      {...this.state}
+                      handleMenuClick={this.handleMenuClick}
+                    />
+                  )}
                 />
-              )}
-            />
-            <Route exact path='/blog' component={BlogPage} />
-            <Route path='/blog/photoessays' component={PhotoEssay} />
-            <Route
-              path='/blog/pouch'
-              render={() => {
-                return (
-                  <Pouch
-                    {...this.state}
-                    handleMenuClick={this.handleMenuClick}
-                  />
-                )
-              }}
-            />
-            {/* <Route exact path='blog/photoessay/:slug' component={} /> */}
-            {/* <Route exact path='blog/pouch/:slug' component={Pouch} /> */}
+                <Route path='/blog/photoessays' component={PhotoEssay} />
+                <Route
+                  exact
+                  path='/blog/pouch'
+                  render={() => {
+                    return (
+                      <Pouch
+                        {...this.state}
+                        handleMenuClick={this.handleMenuClick}
+                      />
+                    )
+                  }}
+                />
+                {/* <Route exact path='blog/photoessay/:slug' component={} /> */}
+                <Route exact path='/blog/pouch/:slug' component={PouchDetail} />
+              </>
+            )}
           </Switch>
         </Router>
       </ApolloProvider>

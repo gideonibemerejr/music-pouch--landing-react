@@ -1,4 +1,4 @@
 import HomePage from './HomePage'
 import BlogPage from './BlogPage'
-
-export { HomePage, BlogPage }
+import PouchDetail from './PouchDetail'
+export { HomePage, BlogPage, PouchDetail }

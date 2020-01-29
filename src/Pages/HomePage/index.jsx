@@ -4,9 +4,7 @@ import { Sections } from './components'
 import Menu from '../../Components/Menu'
 
 const HomePage = props => {
-  return props.isMenuOpen ? (
-    <Menu handleMenuClick={props.handleMenuClick} />
-  ) : (
+  return (
     <Layout {...props}>
       <Sections />
     </Layout>
