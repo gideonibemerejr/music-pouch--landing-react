@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
 import { NavLink, Link, Route, BrowserRouter as Router } from 'react-router-dom'
-import { PhotoEssay, Pouch } from './components'
+import { PhotoEssays, Pouch } from '../index'
 import { Circle, Nav } from '../../Components/'
+import Blog from '../Blog'
 
 export default class BlogPage extends Component {
   state = {}
@@ -13,7 +14,7 @@ export default class BlogPage extends Component {
         <div className='bg-black'>
           <Nav handleMenuClick={this.props.handleMenuClick} color={'white'} />
         </div>
-        <section className='section bg-black white pa5-l ph2 pv5'>
+        <section className='section bg-black white pa5-l ph2 pt5 pb2'>
           <nav className='mh7-l mh4 bb b--white'>
             <ul className=' list w-100 flex justify-start pl0 ml0'>
               <li className='fl sans-serif mr4'>
@@ -22,6 +23,7 @@ export default class BlogPage extends Component {
                   className='link hover-red dim'
                   exact
                   to='/blog'
+                  style={{ outline: 0 }}
                 >
                   THE LATEST
                 </NavLink>
@@ -31,6 +33,7 @@ export default class BlogPage extends Component {
                   activeClassName='active'
                   className='link hover-red dim'
                   to='/blog/pouch'
+                  style={{ outline: 0 }}
                 >
                   POUCH
                 </NavLink>
@@ -38,7 +41,8 @@ export default class BlogPage extends Component {
             </ul>
           </nav>
         </section>
-        <Route exact path='/blog/photoessays' component={PhotoEssay} />
+        <Route exact path='/blog' component={Blog} />
+        <Route exact path='/blog/photoessays' component={PhotoEssays} />
         <Route
           exact
           path='/blog/pouch'

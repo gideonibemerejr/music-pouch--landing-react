@@ -27,12 +27,12 @@ const query = gql`
   }
 `
 
-const Pouch = props => {
+const Blog = () => {
   return (
     <Query asyncMode query={query}>
       {({ loading, error, data }) => {
         return loading ? (
-          <div className='flex flex-column justify-center items-center vh-100'>
+          <div className='mt4 flex flex-column justify-start items-center vh-100'>
             <Circle />
             <h1>Loading</h1>
           </div>
@@ -41,14 +41,14 @@ const Pouch = props => {
             <section className='section bg-black ph7-l pb5-l white mb2'>
               {data.pouches.edges.slice(0, 1).map((item, idx) => (
                 <article key={item.node.id} className='mh7-l mh4-m'>
-                  <ul className='cf list ma0 w-100 h-100 flex justify-center items-center pv4'>
+                  <ul className='cf list ph0 ma0 w-100 h-100 flex justify-center items-center pv4'>
                     <li
                       className='fl w-100 w-50-ns sans-serif'
                       style={{ color: '#EEEEEE' }}
                     >
                       <div className='flex flex-column justify-center items-center'>
                         <div>
-                          <h1 className='fw9 f1 b dib mh4 lh-solid ma0 flex items-start h-100'>
+                          <h1 className='fw9 f1 b dib mh4 lh-solid ma0 flex flex-row-ns items-start-ns flex-column-reverse justify-center items-center h-100'>
                             <span>POUCH</span>{' '}
                             <span className='f2'>
                               <Circle />
@@ -190,4 +190,4 @@ const Pouch = props => {
   )
 }
 
-export default Pouch
+export default Blog

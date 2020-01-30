@@ -160,23 +160,37 @@ article > .link:visited {
 }
 a {
   color: inherit;
+  outline: 0;
 }
-
+a.link {
+  outline: 0;
+}
 a:visited {
   color: currentColor;
+  outline: 0;
 }
 
 a.active {
   color: red;
+  outline: 0;
 }
 
 .card:hover {
   border-bottom: 3px #e7040f solid;
   padding-bottom: 0px;
 }
+.card > h2:hover {
+  color: #e7040f;
+}
 
-.inside > h1:hover,
-.inside > h2:hover {
+h1:hover {
   text-decoration: underline;
   text-decoration-color: #e7040f;
+}
+
+@media screen and (min-width: 960px) {
+  .mh7-l {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
