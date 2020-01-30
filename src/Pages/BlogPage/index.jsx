@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 
-import { NavLink, Link, Route, BrowserRouter as Router } from 'react-router-dom'
-import { PhotoEssays, Pouch } from '../index'
-import { Circle, Nav } from '../../Components/'
-import Blog from '../Blog'
+import { NavLink, Route, BrowserRouter as Router } from 'react-router-dom'
+import { PhotoEssays, Pouch, Blog } from '../index'
+import { Nav } from '../../Components/'
 
 export default class BlogPage extends Component {
   state = {}
