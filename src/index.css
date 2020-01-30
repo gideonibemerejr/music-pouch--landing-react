@@ -150,13 +150,24 @@ footer > .section-layout {
 }
 
 .mw55 {
-  max-width: 24rem;
+  max-width: 16rem;
 }
 .card {
   padding-bottom: 3px;
 }
-.card > .link:visited {
+article > .link:visited {
   color: currentColor;
+}
+a {
+  color: inherit;
+}
+
+a:visited {
+  color: currentColor;
+}
+
+a.active {
+  color: red;
 }
 
 .card:hover {

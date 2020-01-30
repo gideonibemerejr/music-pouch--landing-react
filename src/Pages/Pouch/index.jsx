@@ -6,26 +6,26 @@ import Menu from '../../Components/Menu'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
-const Pouch = props => {
-  return (
-    <Query
-      query={gql`
-        {
-          pouches {
-            edges {
-              node {
-                id
-                title
-                slug
-                author {
-                  name
-                }
-              }
-            }
+const query = gql`
+  {
+    pouches {
+      edges {
+        node {
+          id
+          title
+          slug
+          author {
+            name
           }
         }
-      `}
-    >
+      }
+    }
+  }
+`
+
+const Pouch = props => {
+  return (
+    <Query asyncMode query={query}>
       {({ loading, error, data }) => {
         return loading ? (
           <div className='flex flex-column justify-center items-center vh-100'>
@@ -34,51 +34,41 @@ const Pouch = props => {
           </div>
         ) : (
           <>
-            <div
-              className='vh-100 dt w-100 flex flex-column  bg-dark-gray white cover'
-              style={{
-                background:
-                  'url(http://mrmrs.github.io/photos/u/009.jpg) no-repeat center'
-              }}
-            >
-              <Nav handleMenuClick={props.handleMenuClick} color={'black'} />
-              <ul className='cf list pl0 ml0 w-100 h-100 flex justify-between items-center'>
-                <li
-                  className='fl w-100 w-50-ns sans-serif'
-                  style={{ color: '#EEEEEE' }}
-                >
-                  <div className='flex flex-column justify-center items-center'>
-                    <div>
-                      <h1 className='fw9 f-subheadline-ns f1 b dib pr3 lh-solid ma0 flex items-start h-100'>
-                        <span>POUCH</span>{' '}
-                        <span className='f1'>
-                          <Circle />
-                        </span>
-                      </h1>
-
-                      <blockquote className='ph0 pb2 mb3 mh0 mt2 flex flex-column'>
-                        <p className=' measure f4-l f5 ma0 fw7'>
-                          Short writings
-                        </p>
-                        <p className=' measure f4-l f5 ma0 fw7'>
-                          Escritos Cortos
-                        </p>
-                        <p className=' measure f4-l f5 ma0 fw3'>短い文章</p>
-                        <p className='measure f4-l f5 ma0 fw5'>
-                          Богино бичээсүүд
-                        </p>
-                      </blockquote>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <section className='mh7-l mh2'>
-              <h2 className='f2 mh3'>The Latest</h2>
+            <section className='section bg-black ph5-l pb5-l  white'>
               {data.pouches.edges.slice(0, 1).map((item, idx) => (
-                <article key={item.node.id} className='bt bb b--black-10'>
+                <article key={item.node.id} className='mh7-l'>
+                  <ul className='cf list pl0 ml0 ma0 w-100 h-100 flex justify-between items-center pb4'>
+                    <li
+                      className='fl w-100 w-50-ns sans-serif pb5'
+                      style={{ color: '#EEEEEE' }}
+                    >
+                      <div className='flex flex-column justify-center items-center'>
+                        <div>
+                          <h1 className='fw9 f1 b dib mh4 lh-solid ma0 flex items-start h-100'>
+                            <span>POUCH</span>{' '}
+                            <span className='f2'>
+                              <Circle />
+                            </span>
+                          </h1>
+                          {/*
+                  <blockquote className='ph0 pb2 mb3 mh0 mt2 flex flex-column'>
+                    <p className=' measure f4-l f5 ma0 fw7'>
+                      Short writings
+                    </p>
+                    <p className=' measure f4-l f5 ma0 fw7'>
+                      Escritos Cortos
+                    </p>
+                    <p className=' measure f4-l f5 ma0 fw3'>短い文章</p>
+                    <p className='measure f4-l f5 ma0 fw5'>
+                      Богино бичээсүүд
+                    </p>
+                  </blockquote> */}
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                   <Link
-                    className='db pv4 ph3 ph0-l no-underline black'
+                    className='link db pb4 ph3 ph0-l no-underline'
                     to={`/blog/pouch/${item.node.slug}`}
                   >
                     <div className='flex flex-column flex-row-ns items-center'>
@@ -89,28 +79,43 @@ const Pouch = props => {
                           alt='A dimly lit room with a computer interface terminal.'
                         />
                       </div>
-                      <div className='w-100 w-50-ns pl3-ns'>
+                      <div className='w-100 w-50-ns pl3-ns tl-l tc'>
                         <h1
-                          dangerouslySetInnerHTML={{ __html: item.node.title }}
-                          className='f3 fw7  mt0 lh-title '
+                          dangerouslySetInnerHTML={{
+                            __html: item.node.title
+                          }}
+                          className='f1-l f3 fw7 b  mt0 lh-title '
+                        />
+                        <h2
+                          dangerouslySetInnerHTML={{
+                            __html: item.node.title
+                          }}
+                          className='f4-l f5 fw1 b  mt0 lh-title '
                         />
                         <p className='f6 lh-copy mv0'>
                           BY: {item.node.author.name.toUpperCase()}
                         </p>
-                        <p className='f6 lh-copy mv0'>
-                          {' '}
-                          <strong>RAP</strong>{' '}
-                          <span className='black-50'>/ JANUARY 20 2020</span>
+                        <p className='f6 lh-copy mv0 '>
+                          <span className='white-50'>
+                            <strong className='white'>RAP </strong> / JANUARY 20
+                            2020
+                          </span>
                         </p>
                       </div>
                     </div>
                   </Link>
                 </article>
               ))}
-              <div className='flex flex-wrap items-center justify-between-l justify-center mh2'>
-                {data.pouches.edges.slice(0, 3).map((item, idx) => (
-                  <article key={idx} className='bg-white mw55  mv4 mh1 card'>
-                    <a href='/' className='link dim lh-title w-75'>
+            </section>
+            <section className='ph5-l'>
+              <h2 className='f2 mh7-l mh2'>The Latest</h2>
+              <div className='flex flex-wrap items-center justify-between-l justify-center mh7-l mh2'>
+                {data.pouches.edges.slice(1, 5).map((item, idx) => (
+                  <article
+                    key={idx}
+                    className='bg-white mw6 mw5-l mw6-m mv4 mh1 card'
+                  >
+                    <a href='/' className='link dim lh-title w-25'>
                       <img
                         src='http://tachyons.io/img/cat-720.jpg'
                         className='w-100 db'
@@ -121,7 +126,7 @@ const Pouch = props => {
                           dangerouslySetInnerHTML={{
                             __html: item.node.title
                           }}
-                          className='f5 tc'
+                          className='f4 tc'
                         />
                         <div className='tc'>
                           <p className='f6 lh-copy mv0'>
@@ -146,10 +151,10 @@ const Pouch = props => {
               </div>
             </section>
             <section className='center mw8  mh2'>
-              <h2 className='mh3'>Inside the Pouch</h2>
+              <h2 className='mh2'>Inside the Pouch</h2>
               <article className='bt bb b--black-10'>
                 <a
-                  className='db mv4 mh3 pa0 no-underline black bg-white'
+                  className='db mv4 mh2 pa0 no-underline black bg-white'
                   href='#0'
                 >
                   <div className='flex flex-column flex-row-ns items-center'>

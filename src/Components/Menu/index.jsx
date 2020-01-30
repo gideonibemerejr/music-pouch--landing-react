@@ -5,7 +5,7 @@ import Nav from '../Layout/Nav'
 
 const Menu = ({ handleMenuClick }) => {
   return (
-    <nav className='vh-100 bg-light-pink dt w-100'>
+    <nav className='vh-100 bg-light-pink dt w-100 white'>
       <div
         style={{
           background: 'black no-repeat center right',
@@ -28,18 +28,10 @@ const Menu = ({ handleMenuClick }) => {
           </li>
           <li className=' sans-serif mb4 tc '>
             <Link
-              to='/blog/pouch'
+              to='/blog'
               className='f-subheadline-ns f3 hover-red link dim fw5 white'
             >
-              Pouch
-            </Link>
-          </li>
-          <li className=' sans-serif tc mb4 '>
-            <Link
-              to='/blog/photoessays'
-              className='f-subheadline-ns f3 link dim hover-red fw5 white'
-            >
-              Essays
+              Blog
             </Link>
           </li>
           <li className=' sans-serif tc mb4 '>

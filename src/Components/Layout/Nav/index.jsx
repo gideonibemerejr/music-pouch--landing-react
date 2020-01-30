@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from '../Header/Header.module.css'
 
-const Nav = ({ handleMenuClick, color }) => {
+const Nav = ({ handleMenuClick, color, links }) => {
   return (
     <nav className={`${styles.nav} flex justify-between items-center  mh4 pt4`}>
       <div className={`${styles.arrow}  bw4 bt bl b--${color}`} />
+
       <div className={`${styles.arrow} bw4 bt br b--${color} ${styles.right}`}>
         <div
           onClick={handleMenuClick}

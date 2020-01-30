@@ -43,19 +43,17 @@ class App extends Component {
                     />
                   )}
                 />
-                <Route path='/blog/photoessays' component={PhotoEssay} />
                 <Route
                   exact
-                  path='/blog/pouch'
-                  render={() => {
-                    return (
-                      <Pouch
-                        {...this.state}
-                        handleMenuClick={this.handleMenuClick}
-                      />
-                    )
-                  }}
+                  path='/blog'
+                  render={() => (
+                    <BlogPage
+                      handleMenuClick={this.handleMenuClick}
+                      {...this.state}
+                    />
+                  )}
                 />
+
                 {/* <Route exact path='blog/photoessay/:slug' component={} /> */}
                 <Route exact path='/blog/pouch/:slug' component={PouchDetail} />
               </>
