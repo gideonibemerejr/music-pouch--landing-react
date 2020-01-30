@@ -17,6 +17,11 @@ const query = gql`
           author {
             name
           }
+          pouchMeta {
+            image {
+              sourceUrl
+            }
+          }
         }
       }
     }
@@ -74,7 +79,7 @@ const Pouch = props => {
                     <div className='flex flex-column flex-row-ns items-center'>
                       <div className='pr3-ns mb4 mb0-ns w-100 w-50-ns'>
                         <img
-                          src='http://mrmrs.github.io/photos/cpu.jpg'
+                          src={item.node.pouchMeta.image.sourceUrl}
                           className='db'
                           alt='A dimly lit room with a computer interface terminal.'
                         />
@@ -95,7 +100,7 @@ const Pouch = props => {
                         <p className='f6 lh-copy mv0'>
                           BY: {item.node.author.name.toUpperCase()}
                         </p>
-                        <p className='f6 lh-copy mv0 '>
+                        <p className='f6 lh-copy mv0'>
                           <span className='white-50'>
                             <strong className='white'>RAP </strong> / JANUARY 20
                             2020
@@ -121,7 +126,7 @@ const Pouch = props => {
                         className='w-100 db'
                         alt='Closeup of a tabby cat yawning.'
                       />
-                      <div className='pa3 flex flex-column justify-between h5 items-center'>
+                      <div className='pa3 flex flex-column justify-around h5 items-center'>
                         <h2
                           dangerouslySetInnerHTML={{
                             __html: item.node.title
