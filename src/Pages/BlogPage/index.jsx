@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import { NavLink, Route, BrowserRouter as Router } from 'react-router-dom'
 import { PhotoEssays, Pouch, Blog } from '../index'
+import { PouchDetail } from '../index'
 import { Nav } from '../../Components/'
 
 export default class BlogPage extends Component {
@@ -13,13 +14,13 @@ export default class BlogPage extends Component {
         <div className='bg-black'>
           <Nav handleMenuClick={this.props.handleMenuClick} color={'white'} />
         </div>
-        <section className='section bg-black white pa5-l ph2 pt5 pb2'>
+        <section className='section bg-black white pa4-l ph7-l  pt5 pb2'>
           <nav className='mh7-l mh4 bb b--white'>
-            <ul className=' list w-100 flex justify-start pl0 ml0'>
+            <ul className=' list w-100 flex justify-between  pl0 ml0'>
               <li className='fl sans-serif mr4'>
                 <NavLink
                   activeClassName='active'
-                  className='link hover-red dim'
+                  className='link hover-red '
                   exact
                   to='/blog'
                   style={{ outline: 0 }}
@@ -27,21 +28,33 @@ export default class BlogPage extends Component {
                   THE LATEST
                 </NavLink>
               </li>
-              <li className='fl sans-serif mr4'>
-                <NavLink
-                  activeClassName='active'
-                  className='link hover-red dim'
-                  to='/blog/pouch'
-                  style={{ outline: 0 }}
-                >
-                  POUCH
-                </NavLink>
-              </li>
+              <div>
+                <li className='fl sans-serif mr4'>
+                  <NavLink
+                    activeClassName='active'
+                    className='link hover-red '
+                    to='/blog/pouch'
+                    style={{ outline: 0 }}
+                  >
+                    POUCH
+                  </NavLink>
+                </li>
+                <li className='fl sans-serif'>
+                  <NavLink
+                    activeClassName='active'
+                    className='link hover-red '
+                    to='/blog/essays'
+                    style={{ outline: 0 }}
+                  >
+                    ESSAYS
+                  </NavLink>
+                </li>
+              </div>
             </ul>
           </nav>
         </section>
         <Route exact path='/blog' component={Blog} />
-        <Route exact path='/blog/photoessays' component={PhotoEssays} />
+        <Route exact path='/blog/essays' component={PhotoEssays} />
         <Route
           exact
           path='/blog/pouch'
@@ -51,6 +64,7 @@ export default class BlogPage extends Component {
             )
           }}
         />
+        <Route exact path='/blog/pouch/:slug' component={PouchDetail} />
       </Router>
     )
   }

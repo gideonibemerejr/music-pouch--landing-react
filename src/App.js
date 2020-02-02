@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 
-import { HomePage, BlogPage, PouchDetail } from './Pages'
+import { HomePage, BlogPage } from './Pages'
 import { PhotoEssay, Pouch } from './Pages/BlogPage/components'
 import Menu from './Components/Menu'
 
@@ -54,8 +54,7 @@ class App extends Component {
                   )}
                 />
 
-                {/* <Route exact path='blog/photoessay/:slug' component={} /> */}
-                <Route exact path='/blog/pouch/:slug' component={PouchDetail} />
+                {/* <Route exact path='blog/essays/:slug' component={} /> */}
               </>
             )}
           </Switch>
