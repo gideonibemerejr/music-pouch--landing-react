@@ -5,7 +5,7 @@ import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 
 import { HomePage, BlogPage } from './Pages'
-import { PhotoEssay, Pouch } from './Pages/BlogPage/components'
+
 import Menu from './Components/Menu'
 
 const client = new ApolloClient({

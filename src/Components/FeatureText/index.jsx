@@ -1,9 +1,10 @@
 import React from 'react'
-
-const FeatureText = () => {
+import { DetailHeadline } from '../index'
+const FeatureText = ({ text, title }) => {
   return (
     <div className='center measure-wide f5 pv5 lh-copy ph2'>
-      <h1 className='f1 lh-title'>The repercussion of ugliness is endless</h1>
+      <DetailHeadline text={} />
+      <h1 className='f1 lh-title'>{title}</h1>
       <p>
         The choice of paper size is one of the first of any given work to be
         printed. There are two basic paper size systems in the world: the

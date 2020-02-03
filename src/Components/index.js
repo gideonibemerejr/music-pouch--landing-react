@@ -4,7 +4,7 @@ import Blockquote from './Blockquote'
 // import Card from './Card'
 import FeatureText from './FeatureText'
 import FullScreenCover from './FullScreenCover'
-import { Headline, HorizontalCard, VerticalCard } from './Cards'
+import { Headline, HorizontalCard, VerticalCard, DetailHeadline } from './Cards'
 import Nav from '../Components/Layout/Nav'
 
 export {
@@ -15,7 +15,8 @@ export {
   //   Card,
   FeatureText,
   FullScreenCover,
-  Headline
+  Headline,
+  DetailHeadline
   // HorizontalCard,
   // VerticalCard
 }
