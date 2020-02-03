@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
-import { DetailHeadline } from '../../Components'
+import { DetailHeadline, Circle } from '../../Components'
 import Footer from '../../Components/Layout/Footer'
 class PhotoEssayDetail extends Component {
   state = {}
@@ -13,8 +13,9 @@ class PhotoEssayDetail extends Component {
     return (
       <>
         {loading ? (
-          <div>
-            <p>Loading...</p>
+          <div className='flex flex-column justify-center items-center vh-100'>
+            <Circle />
+            <h1>Loading</h1>
           </div>
         ) : (
           <>

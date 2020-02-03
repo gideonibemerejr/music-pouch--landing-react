@@ -8,7 +8,7 @@ const Headline = ({ article, title, color }) => {
   return (
     <article key={article.node.id} className='mh7-l mh4-m'>
       {title ? (
-        <ul className='cf list ma0 w-100 h-100 flex justify-center items-center pb4'>
+        <ul className='cf ph0 list ma0 w-100 h-100 flex justify-center items-center pb4'>
           <li className='fl w-100 w-50-ns sans-serif' style={{ color: color }}>
             <div className='flex flex-column justify-center items-center'>
               <div>
@@ -27,7 +27,10 @@ const Headline = ({ article, title, color }) => {
         className='link db pb4 ph0-l no-underline'
         to={`/blog/pouch/${article.node.slug}`}
       >
-        <div className={`${color} flex flex-column flex-row-ns items-center`}>
+        <div
+          style={{ outline: 0 }}
+          className={`${color} flex flex-column flex-row-ns items-center`}
+        >
           <div className='pr3-ns mb4 mb0-ns w-100 w-50-ns'>
             <img
               src={article.node.pouchMeta.photos[0].sourceUrl}

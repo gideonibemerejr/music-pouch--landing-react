@@ -3,7 +3,7 @@ import { Circle } from '../../index'
 const DetailHeadline = ({ title, image }) => {
   return (
     <div className='white relative'>
-      <ul className='cf list ma0 w-100 h-100 flex justify-center items-center pb4'>
+      <ul className='cf ph0 list ma0 w-100 h-100 flex justify-center items-center pb4'>
         <li className='fl w-100 w-50-ns sans-serif' style={{ color: 'white' }}>
           <div className='flex flex-column justify-center items-center'>
             <div>
@@ -19,7 +19,10 @@ const DetailHeadline = ({ title, image }) => {
       </ul>
       <article className=''>
         <div className={`flex flex-column items-center`}>
-          <div className='w-100 w-50-ns pl3-ns tc mw7'>
+          <div
+            className='w-100 w-50-ns
+           tc mw7'
+          >
             <h1
               dangerouslySetInnerHTML={{
                 __html: title

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import { Circle, Nav, Headline } from '../../Components'
 
 import { Query } from 'react-apollo'
@@ -45,10 +46,13 @@ const Pouch = props => {
             </section>
             <section className='ph7-l mv2'>
               <h2 className='f2 mh7-l mh4-m mh2'>The Latest</h2>
-              <div className='flex flex-wrap items-center justify-between mh7-l mh4 mb4'>
-                {data.pouches.edges.map((item, idx) => (
+              <div className='flex flex-wrap items-center mh7-l mh4 mb4'>
+                {data.pouches.edges.slice(1).map((item, idx) => (
                   <article key={idx} className='w-25-l w-50-m w-100 mv2 ph2 '>
-                    <a href='/' className='link dim lh-title w-25 '>
+                    <Link
+                      to={`/blog/pouch/${item.node.slug}`}
+                      className='link dim lh-title w-25 '
+                    >
                       <img
                         src='http://tachyons.io/img/cat-720.jpg'
                         className='w-100 db'
@@ -78,7 +82,7 @@ const Pouch = props => {
                           </p>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   </article>
                 ))}
               </div>

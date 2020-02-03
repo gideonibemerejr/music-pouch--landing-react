@@ -20,7 +20,11 @@ class PouchDetail extends Component {
         <FeatureText
           title={props.data.pouch.title}
           text={props.data.pouch.content}
-          image={props.data.pouch.pouchMeta.photos[0].sourceUrl}
+          image={
+            props.data.pouch.pouchMeta.photos
+              ? props.data.pouch.pouchMeta.photos[0].sourceUrl
+              : null
+          }
         />
       </section>
     )

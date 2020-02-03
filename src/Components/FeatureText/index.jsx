@@ -3,9 +3,12 @@ import { DetailHeadline } from '../index'
 const FeatureText = ({ text, title, image }) => {
   return (
     <div className='w-100'>
-      <DetailHeadline title={title} image={image} />
-      <div className='center measure-wide f5 pv5 lh-copy ph2'>
-        <p>
+      <DetailHeadline title={title} image={image ? image : null} />
+      <div
+        className='center measure-wide f5 pv5 lh-copy ph2'
+        dangerouslySetInnerHTML={{ __html: text }}
+      >
+        {/* <p>
           The choice of paper size is one of the first of any given work to be
           printed. There are two basic paper size systems in the world: the
           international A sizes, and the American sizes.
@@ -37,7 +40,7 @@ const FeatureText = ({ text, title, image }) => {
           reason we use it is because everybody in USA uses it, all stationary
           in USA is that size, so are manilla folders, les and of ce equipment!
           The repercussion of ugliness is endless.
-        </p>
+        </p> */}
       </div>
     </div>
   )
