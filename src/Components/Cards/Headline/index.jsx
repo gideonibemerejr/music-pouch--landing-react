@@ -30,7 +30,7 @@ const Headline = ({ article, title, color }) => {
         <div className={`${color} flex flex-column flex-row-ns items-center`}>
           <div className='pr3-ns mb4 mb0-ns w-100 w-50-ns'>
             <img
-              src={article.node.pouchMeta.image.sourceUrl}
+              src={article.node.pouchMeta.photos[0].sourceUrl}
               className='db'
               alt='A dimly lit room with a computer interface terminal.'
             />

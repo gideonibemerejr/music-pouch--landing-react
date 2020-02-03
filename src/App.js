@@ -53,8 +53,6 @@ class App extends Component {
                     />
                   )}
                 />
-
-                {/* <Route exact path='blog/essays/:slug' component={} /> */}
               </>
             )}
           </Switch>

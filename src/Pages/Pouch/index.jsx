@@ -17,7 +17,7 @@ const query = gql`
             name
           }
           pouchMeta {
-            image {
+            photos {
               sourceUrl
             }
           }

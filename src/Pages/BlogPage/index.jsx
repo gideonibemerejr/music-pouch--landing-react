@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { NavLink, Route, BrowserRouter as Router } from 'react-router-dom'
 import { PhotoEssays, Pouch, Blog } from '../index'
-import { PouchDetail } from '../index'
+import { PouchDetail, PhotoEssayDetail } from '../index'
 import { Nav } from '../../Components/'
 
 export default class BlogPage extends Component {
@@ -65,6 +65,7 @@ export default class BlogPage extends Component {
           }}
         />
         <Route exact path='/blog/pouch/:slug' component={PouchDetail} />
+        <Route exact path='/blog/essays/:slug' component={PhotoEssayDetail} />
       </Router>
     )
   }

@@ -15,10 +15,12 @@ class PouchDetail extends Component {
         <h1>Loading</h1>
       </div>
     ) : (
-      <section className='section bg-black ph7-l pb5-l white mb2'>
+      <section className='section db relative'>
+        <div className='absolute w-100 bg-black vh-50' />
         <FeatureText
           title={props.data.pouch.title}
           text={props.data.pouch.content}
+          image={props.data.pouch.pouchMeta.photos[0].sourceUrl}
         />
       </section>
     )
@@ -30,7 +32,7 @@ const getPouchBySlug = gql`
       title
       content
       pouchMeta {
-        image {
+        photos {
           sourceUrl
         }
       }

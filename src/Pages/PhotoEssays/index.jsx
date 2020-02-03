@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { Circle, Headline } from '../../Components'
+import { Circle } from '../../Components'
 
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
@@ -12,6 +13,7 @@ const query = gql`
         node {
           id
           title
+          slug
           author {
             id
             name
@@ -39,9 +41,9 @@ const PhotoEssays = props => {
                 <div className='mh7-l mh4 bt b--black-10' />
                 {data.photoEssays.edges.map((item, idx) => (
                   <article className=' mh7-l mh4 tl-ns tc'>
-                    <a
+                    <Link
                       className='db mv4 pa0 no-underline black bg-white'
-                      href='#0'
+                      to={`/blog/essays/${item.node.slug}`}
                     >
                       <div className='flex flex-column flex-row-ns items-center'>
                         <div className='pr3-ns mb4 mb0-ns w-100 w-50-ns'>
@@ -74,7 +76,7 @@ const PhotoEssays = props => {
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   </article>
                 ))}
               </div>
