@@ -20,7 +20,10 @@ class PhotoEssayDetail extends Component {
         ) : (
           <>
             <div className='bg-black'>
-              <DetailHeadline title={props.data.photoEssay.title} />
+              <DetailHeadline
+                title={props.data.photoEssay.title}
+                pouch={false}
+              />
             </div>
             <article className='helvetica pb5'>
               {/* Blockquote 
@@ -29,7 +32,7 @@ class PhotoEssayDetail extends Component {
               {/* <Blockquote /> */}
               <div className='f5 f3-m lh-copy'>
                 <div className='cf dt-l w-100 bt b--black-10 pv4 bg-black white'>
-                  <div className='dtc-l v-mid mw6 pr3-l'>
+                  <div className='dtc-l v-mid mw6 ph3-l'>
                     <img
                       className='w-100 photo'
                       src={
@@ -47,8 +50,8 @@ class PhotoEssayDetail extends Component {
                     />
                   </div>
                 </div>
-                <div className='cf pt5 ph2 flex items-center'>
-                  <div className='w-100 w-50-l ph5-l ph2 pb3 flex justify-center items-center'>
+                <div className='cf pt3 ph2 flex items-center'>
+                  <div className='w-100 w-50-l ph2 pb3 flex justify-center items-center'>
                     <img
                       className='dib w-100'
                       src={
@@ -57,7 +60,7 @@ class PhotoEssayDetail extends Component {
                       alt='of a dusk skyline above a grassy rockface covered in trees.'
                     />
                   </div>
-                  <div className='fl w-50 w-50-l ph5-l ph2 pb3 flex justify-center items-center'>
+                  <div className='fl w-50 w-50-l ph2 pb3 flex justify-center items-center'>
                     <img
                       className='dib w-100'
                       src={

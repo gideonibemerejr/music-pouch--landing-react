@@ -1,22 +1,27 @@
 import React from 'react'
 import { Circle } from '../../index'
-const DetailHeadline = ({ title, image }) => {
+const DetailHeadline = ({ title, image, pouch }) => {
   return (
     <div className='white relative'>
-      <ul className='cf ph0 list ma0 w-100 h-100 flex justify-center items-center pb4'>
-        <li className='fl w-100 w-50-ns sans-serif' style={{ color: 'white' }}>
-          <div className='flex flex-column justify-center items-center'>
-            <div>
-              <h4 className='fw9 f3 b dib mh4 lh-solid ma0 flex items-center h-100'>
-                <span>POUCH</span>{' '}
-                <span className='f4'>
-                  <Circle />
-                </span>
-              </h4>
+      {pouch ? (
+        <ul className='cf ph0 list ma0 w-100 h-100 flex justify-center items-center pb4'>
+          <li
+            className='fl w-100 w-50-ns sans-serif'
+            style={{ color: 'white' }}
+          >
+            <div className='flex flex-column justify-center items-center'>
+              <div>
+                <h4 className='fw9 f3 b dib mh4 lh-solid ma0 flex items-center h-100'>
+                  <span>POUCH</span>{' '}
+                  <span className='f4'>
+                    <Circle />
+                  </span>
+                </h4>
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      ) : null}
       <article className=''>
         <div className={`flex flex-column items-center`}>
           <div

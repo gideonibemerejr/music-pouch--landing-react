@@ -18,6 +18,7 @@ class PouchDetail extends Component {
       <section className='section db relative'>
         <div className='absolute w-100 bg-black vh-50' />
         <FeatureText
+          pouch={true}
           title={props.data.pouch.title}
           text={props.data.pouch.content}
           image={
