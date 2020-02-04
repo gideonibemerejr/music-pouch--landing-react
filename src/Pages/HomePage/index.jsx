@@ -1,9 +1,11 @@
 import React from 'react'
 import { Layout } from '../../Components'
 import { Sections } from './components'
-const HomePage = () => {
+import Menu from '../../Components/Menu'
+
+const HomePage = props => {
   return (
-    <Layout>
+    <Layout {...props}>
       <Sections />
     </Layout>
   )

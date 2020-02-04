@@ -14,7 +14,9 @@ body {
 .f-headline-ns {
   font-size: 15vmin;
 }
-
+.text_avail {
+  color: #a5cf6f;
+}
 .f1-ns,
 .f2-ns,
 p.text {
@@ -145,4 +147,56 @@ footer > .section-layout {
   .mb2-ns {
     margin-bottom: 0;
   }
+}
+
+.mw55 {
+  max-width: 16rem;
+}
+.card {
+  padding-bottom: 3px;
+}
+article > .link:visited {
+  color: currentColor;
+}
+a {
+  color: inherit;
+  outline: 0;
+}
+a.link {
+  outline: 0;
+}
+a:visited {
+  color: currentColor;
+  outline: 0;
+}
+
+a.active {
+  color: red;
+  outline: 0;
+}
+
+.card:hover {
+  border-bottom: 3px #e7040f solid;
+  padding-bottom: 0px;
+}
+.card > h2:hover {
+  color: #e7040f;
+}
+
+h1:hover {
+  text-decoration: underline;
+  text-decoration-color: #e7040f;
+}
+
+@media screen and (min-width: 960px) {
+  .mh7-l {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+.photo {
+  max-height: 700px;
+  width: auto;
+  vertical-align: middle;
 }
