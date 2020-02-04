@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Header.module.css'
-import info from './assets/info.svg'
-import { Circle, Nav } from '../..'
+
+import { Circle } from '../..'
 
 const Header = ({ handleMenuClick }) => {
   return (

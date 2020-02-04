@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { Circle, Nav, Headline } from '../../Components'
+import { Circle, Headline } from '../../Components'
 
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'

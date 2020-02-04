@@ -5,6 +5,9 @@ import { DetailHeadline, Circle } from '../../Components'
 import Footer from '../../Components/Layout/Footer'
 class PhotoEssayDetail extends Component {
   state = {}
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     const props = this.props
 

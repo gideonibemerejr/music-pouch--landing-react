@@ -34,15 +34,6 @@ const Menu = ({ handleMenuClick }) => {
               Blog
             </Link>
           </li>
-          <li className=' sans-serif tc mb4 '>
-            <button
-              disabled
-              href='/'
-              className='f-subheadline-ns f3 link dim hover-red fw5 white bg-transparent bb-0 br-0 bl-0 bt-0'
-            >
-              Work <span className='f6'>coming soon</span>
-            </button>
-          </li>
         </ul>
         <div className='flex justify-between items-center nav mh4 pb4'>
           <div className='arrow bl bb bw4 b--white'></div>

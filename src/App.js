@@ -22,7 +22,9 @@ class App extends Component {
   handleMenuClick = () => {
     this.setState({ isMenuOpen: !this.state.isMenuOpen })
   }
-
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <ApolloProvider client={client}>

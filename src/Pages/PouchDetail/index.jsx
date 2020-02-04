@@ -5,6 +5,9 @@ import { Circle, FeatureText } from '../../Components'
 
 class PouchDetail extends Component {
   state = {}
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     const props = this.props
 

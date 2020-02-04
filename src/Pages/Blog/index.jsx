@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Circle, Nav, Headline } from '../../Components'
+import { Circle, Headline } from '../../Components'
 
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
@@ -104,7 +104,7 @@ const Blog = () => {
               <div className='ph2 '>
                 <div className='mh7-l mh4 bt b--black-10' />
                 {data.photoEssays.edges.map((item, idx) => (
-                  <article className=' mh7-l mh4 tl-ns tc'>
+                  <article key={idx} className=' mh7-l mh4 tl-ns tc'>
                     <Link
                       className='db mv4 pa0 no-underline black bg-white'
                       to={`/blog/essays/${item.node.slug}`}
