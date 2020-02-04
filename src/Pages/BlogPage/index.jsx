@@ -25,7 +25,7 @@ export default class BlogPage extends Component {
                   to='/blog'
                   style={{ outline: 0 }}
                 >
-                  THE LATEST
+                  The Latest
                 </NavLink>
               </li>
               <div>
