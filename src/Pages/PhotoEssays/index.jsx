@@ -55,7 +55,7 @@ const PhotoEssays = props => {
                           <img
                             src={item.node.photoEssayMeta.photos[0].sourceUrl}
                             className='dib ma0'
-                            alt='A dimly lit room with a computer interface terminal.'
+                            alt='A dimly lit room with a computer interface terminal. lit'
                           />
                         </div>
                         <div className='w-100 w-50-ns pl3-ns bg-white ph3 pb3 flex flex-column items-center'>
