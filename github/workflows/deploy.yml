@@ -2,6 +2,8 @@ name: Music Pouch Deployment
 
 on:
   pull_request:
+    paths:
+      - '**'
 
 jobs:
   build:
