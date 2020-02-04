@@ -194,3 +194,9 @@ h1:hover {
     margin-right: 2rem;
   }
 }
+
+.photo {
+  max-height: 700px;
+  width: auto;
+  vertical-align: middle;
+}

@@ -5,7 +5,7 @@ const FeatureText = ({ text, title, image }) => {
     <div className='w-100'>
       <DetailHeadline title={title} image={image ? image : null} />
       <div
-        className='center measure-wide f5 pv5 lh-copy ph2'
+        className='mt0-l mt6 pt5 center measure-wide f5 pv5 lh-copy ph2 '
         dangerouslySetInnerHTML={{ __html: text }}
       >
         {/* <p>

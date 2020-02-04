@@ -29,6 +29,15 @@ const query = gql`
         node {
           id
           title
+          slug
+          author {
+            name
+          }
+          photoEssayMeta {
+            photos {
+              sourceUrl
+            }
+          }
         }
       }
     }
@@ -96,29 +105,33 @@ const Blog = () => {
                 <div className='mh7-l mh4 bt b--black-10' />
                 {data.photoEssays.edges.map((item, idx) => (
                   <article className=' mh7-l mh4 tl-ns tc'>
-                    <a
+                    <Link
                       className='db mv4 pa0 no-underline black bg-white'
-                      href='#0'
+                      to={`/blog/essays/${item.node.slug}`}
                     >
                       <div className='flex flex-column flex-row-ns items-center'>
                         <div className='pr3-ns mb4 mb0-ns w-100 w-50-ns'>
                           <img
-                            src='http://mrmrs.github.io/photos/cpu.jpg'
+                            src={item.node.photoEssayMeta.photos[0].sourceUrl}
                             className='dib ma0'
                             alt='A dimly lit room with a computer interface terminal.'
                           />
                         </div>
                         <div className='w-100 w-50-ns pl3-ns bg-white ph3 pb3 flex flex-column items-center'>
                           <div>
-                            <h1 className='f3 fw7  mt0 lh-title'>
-                              Tech Giant Invests Huge Money Lorem ipsum dolor
-                            </h1>
+                            <h1
+                              className='f3-l f5 fw7 mt0 lh-title'
+                              dangerouslySetInnerHTML={{
+                                __html: item.node.title
+                              }}
+                            />
+
                             <p className='f6 lh-copy mv0'>
                               BY:&nbsp;
                               <span
-                              // dangerouslySetInnerHTML={{
-                              //   __html: item.node.author.name.toUpperCase()
-                              // }}
+                                dangerouslySetInnerHTML={{
+                                  __html: item.node.author.name.toUpperCase()
+                                }}
                               />
                             </p>
                             <p className='f6 lh-copy mv0'>
@@ -131,7 +144,7 @@ const Blog = () => {
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   </article>
                 ))}
               </div>
