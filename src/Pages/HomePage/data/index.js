@@ -2,13 +2,14 @@ const infoBlack = [
   {
     title: 'What we do',
     copy:
-      "Music Pouch is a public relations firm and creative studio that started on two friends' iPhones. We tell the stories of musicians, creatives, and brands that we enjoy."
+      "Music Pouch is a blog, public relations firm, and creative studio that started on two friends' iPhones. Across various media, we tell the stories of musicians, creatives, and brands that we enjoy."
   },
   {
     title: 'How we do it',
     copy:
-      "We don't have any fancy diagrams that explain our creative process, but in short, we are eternally curious. Together, we look at a each clients' problem at every angle, then discuss and debate it.",
-    copy2: "Curiosity, collaboration, and conversation. That's our process"
+      "In short, we are eternally curious. Together, we look at a each clients' problem at every angle, then discuss and debate it.",
+    copy2:
+      'Curiosity, collaboration, and conversation lead us to our solutions.'
   }
 ]
 
@@ -16,7 +17,7 @@ const infoRed = [
   {
     title: 'Our Clients',
     copy:
-      'We represent, manage, and collaborate with brands, artists, musicians, and creatives. These people and organizations are focused on creating or performing at music based special events. Our clients have a unique tone and succeed through collaboration.'
+      'We document, represent, and collaborate with brands, artists, musicians, and creatives. These people and organizations are focused on creating or performing at music based special events. Our clients have a unique tone and succeed through collaboration.'
   },
   {
     title: 'Our Studio',
@@ -29,24 +30,16 @@ const services = {
   title: 'Services',
   services: [
     'Animation',
-
     'App Development',
-
     'Branding',
-
     'Campaigns',
-
-    'Communication',
-
     'Consulting',
-
     'Design',
     'Direction',
-
     'Event Production',
-
     'Photography',
-
+    'Photojournalism',
+    'Public Relations',
     'Web Development'
   ]
 }

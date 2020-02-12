@@ -200,3 +200,11 @@ h1:hover {
   width: auto;
   vertical-align: middle;
 }
+
+.no-underline-hover {
+  text-decoration: none;
+}
+
+.no-underline-hover:hover {
+  text-decoration: none;
+}
