@@ -46,7 +46,7 @@ class App extends Component {
                   )}
                 />
                 <Route
-                  exact
+                 
                   path='/blog'
                   render={() => (
                     <BlogPage
