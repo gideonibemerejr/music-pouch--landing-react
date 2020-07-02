@@ -1,7 +1,7 @@
-import React from 'react'
-import styles from './Header.module.css'
-import { Link } from 'react-router-dom'
-import { Circle } from '../..'
+import React from 'react';
+import styles from './Header.module.css';
+import { Link } from 'react-router-dom';
+import { Circle } from '../..';
 
 const Header = ({ handleMenuClick }) => {
   return (
@@ -11,26 +11,7 @@ const Header = ({ handleMenuClick }) => {
           className={`${styles.nav} flex justify-between items-center  mh4 pt5`}
         >
           <div className={`${styles.arrow}  bw4 bt bl `} />
-          <div className={`${styles.arrow} bw4 bt br  ${styles.right}`}>
-            <div onClick={handleMenuClick} className='tr black hover-red dim'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='40'
-                height='40'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                className='feather feather-info'
-              >
-                <circle cx='12' cy='12' r='10'></circle>
-                <line x1='12' y1='16' x2='12' y2='12'></line>
-                <line x1='12' y1='8' x2='12' y2='8'></line>
-              </svg>
-            </div>
-          </div>
+          <div className={`${styles.arrow} bw4 bt br  ${styles.right}`} />
         </nav>
         <div className='mh4 pv4 flex flex-column justify-end'>
           <div>
@@ -59,7 +40,7 @@ const Header = ({ handleMenuClick }) => {
         </div>
       </section>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,29 +1,29 @@
-import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import ApolloClient from 'apollo-boost'
-import { ApolloProvider } from 'react-apollo'
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 
-import { HomePage, BlogPage } from './Pages'
+import { HomePage, PortfolioPage } from './Pages';
 
-import Menu from './Components/Menu'
+import Menu from './Components/Menu';
 
 const client = new ApolloClient({
-  uri: 'https://music.gideonibemerejr.com/graphql'
-})
+  uri: 'https://music.gideonibemerejr.com/graphql',
+});
 
 class App extends Component {
   state = {
     title: 'Music Pouch',
     tagline: 'An idea on two iPhones',
-    isMenuOpen: false
-  }
+    isMenuOpen: false,
+  };
 
   handleMenuClick = () => {
-    this.setState({ isMenuOpen: !this.state.isMenuOpen })
-  }
+    this.setState({ isMenuOpen: !this.state.isMenuOpen });
+  };
   componentDidMount() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
   render() {
     return (
@@ -36,6 +36,15 @@ class App extends Component {
             ) : (
               <>
                 <Route
+                  path='/work'
+                  render={() => (
+                    <PortfolioPage
+                      handleMenuClick={this.handleMenuClick}
+                      {...this.state}
+                    />
+                  )}
+                />
+                <Route
                   exact
                   path='/'
                   render={() => (
@@ -45,23 +54,13 @@ class App extends Component {
                     />
                   )}
                 />
-                <Route
-                 
-                  path='/blog'
-                  render={() => (
-                    <BlogPage
-                      handleMenuClick={this.handleMenuClick}
-                      {...this.state}
-                    />
-                  )}
-                />
               </>
             )}
           </Switch>
         </Router>
       </ApolloProvider>
-    )
+    );
   }
 }
 
-export default App
+export default App;

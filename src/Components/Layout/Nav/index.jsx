@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from '../Header/Header.module.css'
+import React from 'react';
+import styles from '../Header/Header.module.css';
 
 const Nav = ({ handleMenuClick, color, links }) => {
   return (
@@ -30,7 +30,7 @@ const Nav = ({ handleMenuClick, color, links }) => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

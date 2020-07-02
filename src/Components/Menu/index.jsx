@@ -26,14 +26,14 @@ const Menu = ({ handleMenuClick }) => {
               Home
             </Link>
           </li>
-          <li className=' sans-serif mb4 tc '>
+          {/* <li className=' sans-serif mb4 tc '>
             <Link
               to='/blog'
               className='f-subheadline-ns f3 hover-red link dim fw5 white'
             >
               Blog
             </Link>
-          </li>
+          </li> */}
         </ul>
         <div className='flex justify-between items-center nav mh4 pb4'>
           <div className='arrow bl bb bw4 b--white'></div>

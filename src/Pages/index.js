@@ -1,17 +1,8 @@
-import HomePage from './HomePage'
-import BlogPage from './BlogPage'
-import PouchDetail from './PouchDetail'
-import Blog from './Blog'
-import Pouch from './Pouch'
-import PhotoEssays from './PhotoEssays'
-import PhotoEssayDetail from './PhotoEssayDetail'
-
-export {
-  HomePage,
-  BlogPage,
-  PouchDetail,
-  Blog,
-  Pouch,
-  PhotoEssays,
-  PhotoEssayDetail
-}
+export { default as HomePage } from './HomePage';
+export { default as BlogPage } from './BlogPage';
+export { default as PouchDetail } from './PouchDetail';
+export { default as Blog } from './Blog';
+export { default as Pouch } from './Pouch';
+export { default as PhotoEssays } from './PhotoEssays';
+export { default as PhotoEssayDetail } from './PhotoEssayDetail';
+export { default as PortfolioPage } from './PortfolioPage';
