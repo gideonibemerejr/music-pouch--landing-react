@@ -36,7 +36,6 @@ class App extends Component {
             ) : (
               <>
                 <Route
-                  exact
                   path='/work'
                   render={() => (
                     <PortfolioPage
@@ -46,6 +45,7 @@ class App extends Component {
                   )}
                 />
                 <Route
+                  exact
                   path='/'
                   render={() => (
                     <HomePage
