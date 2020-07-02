@@ -22,7 +22,7 @@ const work = [
     client: 'Black Buddha Creative Agency',
     project_name: 'A portfolio for a Houston based arts and community agency',
     img: 'https://musicpouch.s3.amazonaws.com/buddha2.png',
-    link: 'https://www.blackbuddha.agency',
+    link: 'http://www.blackbuddha.agency',
   },
 ];
 
