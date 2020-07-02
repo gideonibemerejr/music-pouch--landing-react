@@ -36,6 +36,7 @@ class App extends Component {
             ) : (
               <>
                 <Route
+                  exact
                   path='/work'
                   render={() => (
                     <PortfolioPage
